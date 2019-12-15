@@ -8,6 +8,7 @@ RUN apk add --no-cache --update \
       libxslt libxslt-dev \
       libjpeg-turbo-dev zlib-dev \
       npm \
+      git \
  && pip3 install --no-cache --upgrade \
       pip setuptools wheel apigeecli \
  && npm install -g \
