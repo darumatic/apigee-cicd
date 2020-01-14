@@ -9,8 +9,14 @@ RUN apk add --no-cache --update \
       libjpeg-turbo-dev zlib-dev \
       npm \
       git \
+      make \
+      coreutils \
  && pip3 install --no-cache --upgrade \
       pip setuptools wheel apigeecli \
  && npm install -g \
-      apigeelint newman
+      apigeelint newman \
+ && git clone https://github.com/AGWA/git-crypt.git \
+ && cd git-crypt \
+ && make \
+ && make install PREFIX=/usr/local
 WORKDIR /home/apigee
