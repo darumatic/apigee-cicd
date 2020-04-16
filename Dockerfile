@@ -12,7 +12,7 @@ RUN apk add --no-cache --update \
       make \
       coreutils \
  && pip3 install --no-cache --upgrade \
-      pip setuptools wheel apigeecli==0.24.2 \
+      pip setuptools wheel apigeecli==0.33.0 \
  && npm install -g \
       apigeelint newman \
  && git clone https://github.com/AGWA/git-crypt.git \
