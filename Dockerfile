@@ -11,12 +11,19 @@ RUN apk add --no-cache --update \
       git \
       make \
       coreutils \
+      gnupg gawk \
+      bash \
  && pip3 install --no-cache --upgrade \
       pip setuptools wheel apigeecli==0.34.2 \
  && npm install -g \
       apigeelint newman \
  && git clone https://github.com/AGWA/git-crypt.git \
  && cd git-crypt \
+ && make \
+ && make install PREFIX=/usr/local \
+ && cd .. \
+ && git clone https://github.com/sobolevn/git-secret.git git-secret \
+ && cd git-secret && make build \
  && make \
  && make install PREFIX=/usr/local
 WORKDIR /home/apigee
