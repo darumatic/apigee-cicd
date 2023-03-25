@@ -1,3 +1,7 @@
+![Docker Pulls](https://img.shields.io/docker/pulls/darumatic/apigee-cicd)
+![Docker Image Size (latest)](https://img.shields.io/docker/image-size/darumatic/apigee-cicd/latest)
+![Docker Image Version (by tag)](https://img.shields.io/docker/v/darumatic/apigee-cicd/latest)
+
 # Darumatic Apigee CICD Docker Image
 
 This Dockerfile builds a Docker image based on Alpine with various tools and libraries required for working with Apigee in a CICD environment. The image includes the following components:
